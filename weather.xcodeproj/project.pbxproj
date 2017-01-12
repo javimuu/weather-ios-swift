@@ -56,15 +56,79 @@
 		3644B7111E27985100B8A93C /* weather */ = {
 			isa = PBXGroup;
 			children = (
-				3644B7121E27985100B8A93C /* AppDelegate.swift */,
-				3644B7141E27985100B8A93C /* ViewController.swift */,
-				3644B7161E27985100B8A93C /* Main.storyboard */,
-				3644B71C1E27985100B8A93C /* Assets.xcassets */,
-				3644B71E1E27985100B8A93C /* LaunchScreen.storyboard */,
-				3644B7211E27985100B8A93C /* Info.plist */,
+				3644B7271E27988100B8A93C /* Controllers */,
+				3644B7281E2798CA00B8A93C /* Factories */,
+				3644B7291E2798F900B8A93C /* Models */,
+				3644B72B1E27990A00B8A93C /* Resources */,
+				3644B72C1E27991100B8A93C /* Supporting Files */,
+				3644B72A1E27990200B8A93C /* Views */,
 				3644B7191E27985100B8A93C /* weather.xcdatamodeld */,
 			);
 			path = weather;
+			sourceTree = "<group>";
+		};
+		3644B7271E27988100B8A93C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3644B7141E27985100B8A93C /* ViewController.swift */,
+				3644B7121E27985100B8A93C /* AppDelegate.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3644B7281E2798CA00B8A93C /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
+		3644B7291E2798F900B8A93C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3644B72A1E27990200B8A93C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3644B72E1E27994B00B8A93C /* Storyboard */,
+				3644B72D1E27994500B8A93C /* weather */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3644B72B1E27990A00B8A93C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3644B71C1E27985100B8A93C /* Assets.xcassets */,
+				3644B7211E27985100B8A93C /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3644B72C1E27991100B8A93C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3644B72D1E27994500B8A93C /* weather */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = weather;
+			sourceTree = "<group>";
+		};
+		3644B72E1E27994B00B8A93C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3644B71E1E27985100B8A93C /* LaunchScreen.storyboard */,
+				3644B7161E27985100B8A93C /* Main.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
