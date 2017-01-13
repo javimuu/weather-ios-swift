@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import UIKit
+class CustomTableViewCell: UITableViewCell {
+    @IBOutlet weak var iconCol: UIImageView!
+    @IBOutlet weak var weekdayCol: UILabel!
+    @IBOutlet weak var temperatureCol: UILabel!
+}

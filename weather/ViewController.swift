@@ -23,14 +23,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.responseToSwipeGesture))
-        swipeRight.direction = UISwipeGestureRecognizerDirection.right
-        self.view.addGestureRecognizer(swipeRight)
-        
+        // Handle swipe event
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.responseToSwipeGesture))
-        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        swipeLeft.direction = .left
         self.view.addGestureRecognizer(swipeLeft)
         
     }
@@ -43,9 +39,7 @@ class ViewController: UIViewController {
     func responseToSwipeGesture(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture  as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
-                
-            case UISwipeGestureRecognizerDirection.right:
-                print("right")
+
             case UISwipeGestureRecognizerDirection.left:
                 SwipeHelper.sharedInstance.presentDestination(self, destination: "weatherListController")
                 

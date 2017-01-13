@@ -16,13 +16,14 @@ class ProgressHUDHelper {
         // do initial setup or establish an initial connection
     }
     
+    
     func showLoadingHUD(to_view: UIView) {
         let hud = MBProgressHUD.showAdded(to: to_view, animated: true)
-        hud.labelText = "Loading..."
+        hud.label.text = "Loading..."
     }
     
     func hideLoadingHUD(for_view: UIView) {
-        MBProgressHUD.hideAllHUDs(for: for_view, animated: true)
+        MBProgressHUD.hide(for: for_view, animated: true)
     }
     
 }
