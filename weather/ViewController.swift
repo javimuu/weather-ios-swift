@@ -10,20 +10,19 @@ import UIKit
 import MBProgressHUD
 
 class ViewController: UIViewController {
-    @IBOutlet weak var contentView: UIView!
+    
     @IBOutlet weak var temperature: UILabel!
     @IBOutlet weak var minMax: UILabel!
     @IBOutlet weak var mainWeather: UILabel!
     @IBOutlet weak var iconWeather: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        ProgressHUDHelper.sharedInstance.showLoadingHUD(to_view: contentView)
+        ProgressHUDHelper.sharedInstance.showLoadingHUD(to_view: view)
     }
   
     override func viewDidAppear(_ animated: Bool) {
         
-        ProgressHUDHelper.sharedInstance.hideLoadingHUD(for_view: contentView)
+        ProgressHUDHelper.sharedInstance.hideLoadingHUD(for_view: view)
         GettingCurrentWeatherHelper.instance.getCurrentWeather { result in
             let currentWeather = result.value
             
@@ -34,7 +33,6 @@ class ViewController: UIViewController {
             self.mainWeather.text = generateViewHelper.mainWeather
             self.minMax.text = generateViewHelper.maxMinTemp
         }
-
     }
     
     override func viewDidLoad() {

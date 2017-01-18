@@ -67,7 +67,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contentView" destination="8bC-Xf-vdC" id="YgS-hP-aVp"/>
                         <outlet property="iconWeather" destination="P0q-SQ-e4G" id="5XO-jP-827"/>
                         <outlet property="mainWeather" destination="0tm-G3-5f8" id="mJk-w5-hft"/>
                         <outlet property="minMax" destination="tTI-CR-Lm8" id="zMs-j6-cnv"/>

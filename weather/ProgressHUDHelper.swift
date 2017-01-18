@@ -11,6 +11,7 @@ import UIKit
 import MBProgressHUD
 
 class ProgressHUDHelper {
+    
     static let sharedInstance = ProgressHUDHelper()
     
     fileprivate init() {
