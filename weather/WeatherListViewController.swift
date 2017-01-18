@@ -11,7 +11,6 @@ import UIKit
 class WeatherListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewCell: CustomTableViewCell!
     
     let cellReuseIdentifier = "cell"
     

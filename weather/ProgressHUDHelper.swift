@@ -12,7 +12,8 @@ import MBProgressHUD
 
 class ProgressHUDHelper {
     static let sharedInstance = ProgressHUDHelper()
-    init() {
+    
+    fileprivate init() {
         // do initial setup or establish an initial connection
     }
     

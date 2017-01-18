@@ -10,14 +10,14 @@ import UIKit
 import MBProgressHUD
 
 class ViewController: UIViewController {
-    @IBOutlet weak var contentView: UIView!
+//    @IBOutlet weak var contentView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
-        ProgressHUDHelper.sharedInstance.showLoadingHUD(to_view: contentView)
+        ProgressHUDHelper.sharedInstance.showLoadingHUD(to_view: view)
     }
   
     override func viewDidAppear(_ animated: Bool) {
-        ProgressHUDHelper.sharedInstance.hideLoadingHUD(for_view: contentView)
+        ProgressHUDHelper.sharedInstance.hideLoadingHUD(for_view: view)
     }
     
     

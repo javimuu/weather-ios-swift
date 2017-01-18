@@ -67,7 +67,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contentView" destination="8bC-Xf-vdC" id="YgS-hP-aVp"/>
                         <segue destination="AvJ-kh-0DP" kind="show" identifier="presentToWeatherListView" id="B31-6h-pAD"/>
                     </connections>
                 </viewController>
@@ -96,7 +95,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IuA-kd-ckN" id="KUB-nd-Odd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mBC-kz-JSV" userLabel="iconCol">

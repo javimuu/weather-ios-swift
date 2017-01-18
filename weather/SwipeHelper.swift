@@ -11,7 +11,8 @@ import UIKit
 
 class SwipeHelper {
     static let sharedInstance = SwipeHelper()
-    init() {
+    
+    fileprivate init() {
         // do initial setup or establish an initial connection
     }
     
