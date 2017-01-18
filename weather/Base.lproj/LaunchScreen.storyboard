@@ -22,17 +22,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_launch.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IJj-bI-ojb">
-                                <rect key="frame" x="-7" y="-6" width="382" height="673"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="382" id="0Qu-Fq-GSs"/>
-                                    <constraint firstAttribute="height" constant="673" id="YfP-U2-ZVH"/>
-                                </constraints>
+                                <rect key="frame" x="-3.5" y="-3" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IJj-bI-ojb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-3.5" id="G9f-mT-KXY"/>
+                            <constraint firstItem="IJj-bI-ojb" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="PhV-Uq-vdw"/>
                             <constraint firstItem="IJj-bI-ojb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-3" id="glN-ka-drY"/>
+                            <constraint firstItem="IJj-bI-ojb" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="uDu-bg-uri"/>
                         </constraints>
                     </view>
                 </viewController>
