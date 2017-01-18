@@ -22,15 +22,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_launch.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IJj-bI-ojb">
-                                <rect key="frame" x="-3.5" y="-3" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IJj-bI-ojb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-3.5" id="G9f-mT-KXY"/>
-                            <constraint firstItem="IJj-bI-ojb" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="PhV-Uq-vdw"/>
-                            <constraint firstItem="IJj-bI-ojb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-3" id="glN-ka-drY"/>
-                            <constraint firstItem="IJj-bI-ojb" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="uDu-bg-uri"/>
+                            <constraint firstItem="IJj-bI-ojb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZLW-S6-Fvw"/>
+                            <constraint firstItem="IJj-bI-ojb" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="ehi-gE-Gpx"/>
+                            <constraint firstItem="IJj-bI-ojb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="exZ-WE-kGi"/>
+                            <constraint firstItem="IJj-bI-ojb" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="fCa-kK-zc5"/>
                         </constraints>
                     </view>
                 </viewController>
