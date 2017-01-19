@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class SwipeHelper {
+    
     static let sharedInstance = SwipeHelper()
     
     fileprivate init() {
