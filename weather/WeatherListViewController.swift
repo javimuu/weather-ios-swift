@@ -31,9 +31,18 @@ class WeatherListViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.responseToSwipeGesture))
-        swipeRight.direction = .right
-        self.view.addGestureRecognizer(swipeRight)
+//        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.responseToSwipeGesture))
+//        swipeRight.direction = .right
+//        self.view.addGestureRecognizer(swipeRight)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        
+        // set transition delegate for our menu view controller
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.responseToSwipeGesture))
+        swipeLeft.direction = .down
+        self.view.addGestureRecognizer(swipeLeft)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,7 +66,7 @@ class WeatherListViewController: UIViewController, UITableViewDelegate, UITableV
         self.forecastWrapper = forecastWrapper
         self.forecasts = forecastWrapper.list
         
-        tableView.delegate = self
+//        tableView.delegate = self
         tableView.dataSource = self
     }
     
@@ -92,11 +101,11 @@ class WeatherListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     // MARK: - Handle events
-    
-    @IBAction func backToMainView(sender: UIBarButtonItem) {
-        
-        SwipeHelper.sharedInstance.presentDestination(self, destination: "viewController")
-    }
+//    
+//    @IBAction func backToMainView(sender: UIBarButtonItem) {
+//        
+//        SwipeHelper.sharedInstance.presentDestination(self, destination: "viewController")
+//    }
     
     func responseToSwipeGesture(gesture: UIGestureRecognizer) {
         
@@ -104,9 +113,12 @@ class WeatherListViewController: UIViewController, UITableViewDelegate, UITableV
             
             switch swipeGesture.direction {
                 
-            case UISwipeGestureRecognizerDirection.right:
-                SwipeHelper.sharedInstance.presentDestination(self, destination: "viewController")
-            default: break
+            case UISwipeGestureRecognizerDirection.down:
+                print("down")
+                self.dismiss(animated: true, completion: nil)
+            default:
+                print("def")
+                break
                 
             }
         }

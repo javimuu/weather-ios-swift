@@ -22,7 +22,6 @@
 		364E9FA11E2DCE8400848ADD /* GenerateViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364E9FA01E2DCE8400848ADD /* GenerateViewHelper.swift */; };
 		364E9FA31E2DD39E00848ADD /* GenerateWeatherListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364E9FA21E2DD39E00848ADD /* GenerateWeatherListHelper.swift */; };
 		36C71EC31E2886FD00DAA70D /* SwipeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C71EC21E2886FD00DAA70D /* SwipeHelper.swift */; };
-		36C71EC81E28A91700DAA70D /* WeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C71EC61E28A67600DAA70D /* WeatherListViewController.swift */; };
 		36C71ECA1E28B1AA00DAA70D /* ProgressHUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C71EC91E28B1AA00DAA70D /* ProgressHUDHelper.swift */; };
 		36C71ECC1E28D6F600DAA70D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C71ECB1E28D6F600DAA70D /* CustomTableViewCell.swift */; };
 		36C71ECF1E28F50200DAA70D /* ConditionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C71ECE1E28F50200DAA70D /* ConditionFactory.swift */; };
@@ -49,7 +48,6 @@
 		364E9FA01E2DCE8400848ADD /* GenerateViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateViewHelper.swift; sourceTree = "<group>"; };
 		364E9FA21E2DD39E00848ADD /* GenerateWeatherListHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateWeatherListHelper.swift; sourceTree = "<group>"; };
 		36C71EC21E2886FD00DAA70D /* SwipeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeHelper.swift; sourceTree = "<group>"; };
-		36C71EC61E28A67600DAA70D /* WeatherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherListViewController.swift; sourceTree = "<group>"; };
 		36C71EC91E28B1AA00DAA70D /* ProgressHUDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUDHelper.swift; sourceTree = "<group>"; };
 		36C71ECB1E28D6F600DAA70D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		36C71ECE1E28F50200DAA70D /* ConditionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionFactory.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 		3644B7271E27988100B8A93C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				36C71EC61E28A67600DAA70D /* WeatherListViewController.swift */,
 				3644B7141E27985100B8A93C /* ViewController.swift */,
 				3644B7121E27985100B8A93C /* AppDelegate.swift */,
 			);
@@ -352,7 +349,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36C71EC81E28A91700DAA70D /* WeatherListViewController.swift in Sources */,
 				36C71ED11E28F55000DAA70D /* Condition.swift in Sources */,
 				36C71ECF1E28F50200DAA70D /* ConditionFactory.swift in Sources */,
 				360A4C501E2CB82E003A75FF /* config.swift in Sources */,
