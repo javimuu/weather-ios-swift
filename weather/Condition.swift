@@ -71,8 +71,6 @@ struct MainWeather {
 }
 
 struct Sys {
-    let id: Int
-    let type: Int
     let message: Double
     let country: String
     let sunrise: Double
@@ -101,7 +99,6 @@ struct Condition {
     let weather: [Weather]
     let base: String
     let main: MainWeather
-    let visibility: Int
     let wind: Wind
     let clouds: Cloud
     let date: Double
@@ -157,10 +154,6 @@ struct Condition {
         
         let main = MainWeather(temperature: temperature, pressure: pressure, humidity: humidity, tempMin: tempMin, tempMax: tempMax)
         
-        guard let visibility = json[ConditionFields.visibility.rawValue] as? Int else {
-            throw SerializationError.missing(ConditionFields.visibility.rawValue)
-        }
-        
         guard let windJSON = json[ConditionFields.wind.rawValue] as? [String: Double],
             let windBearing = windJSON[WindFields.windBearing.rawValue],
             let windSpeed = windJSON[WindFields.windSpeed.rawValue]
@@ -181,8 +174,6 @@ struct Condition {
         }
         
         guard let sysJSON = json[ConditionFields.sys.rawValue] as? [String: Any],
-            let type = sysJSON[SysFields.type.rawValue] as? Int,
-            let sysid = sysJSON[SysFields.id.rawValue] as? Int,
             let message = sysJSON[SysFields.message.rawValue] as? Double,
             let country = sysJSON[SysFields.country.rawValue] as? String,
             let sunrise = sysJSON[SysFields.sunrise.rawValue] as? Double,
@@ -191,7 +182,7 @@ struct Condition {
                 throw SerializationError.missing(ConditionFields.sys.rawValue)
         }
         
-        let sys = Sys(id: sysid, type: type, message: message, country: country, sunrise: sunrise, sunset: sunset)
+        let sys = Sys(message: message, country: country, sunrise: sunrise, sunset: sunset)
 
         guard let id = json[ConditionFields.id.rawValue] as? Int else {
             throw SerializationError.missing(ConditionFields.id.rawValue)
@@ -209,7 +200,6 @@ struct Condition {
         self.weather = weather
         self.base = base
         self.main = main
-        self.visibility = visibility
         self.wind = wind
         self.clouds = Cloud(all: clouds)
         self.date = date
