@@ -31,14 +31,22 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegat
     override func viewDidAppear(_ animated: Bool) {
         ProgressHUDHelper.sharedInstance.hideLoadingHUD(for_view: view)
         GettingCurrentWeatherHelper.instance.getCurrentWeather { result in
-            let currentWeather = result.value
             
-            let generateViewHelper =  GenerateViewHelper.instance.generateView(currentWeather!)
+            if result.isSuccess {
+                let currentWeather = result.value
+                
+                let generateViewHelper =  GenerateViewHelper.instance.generateView(currentWeather!)
+                
+                self.iconLabel?.image = UIImage(named: generateViewHelper.icon)
+                self.temperatureLabel?.text = generateViewHelper.temperature
+                self.mainWeatherLabel?.text = generateViewHelper.mainWeather
+                self.minMaxWeather?.text = generateViewHelper.maxMinTemp
+            } else {
+                let alert = UIAlertController(title: "Unable to load current weather data", message: "Cannot get current weather data", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             
-            self.iconLabel?.image = UIImage(named: generateViewHelper.icon)
-            self.temperatureLabel?.text = generateViewHelper.temperature
-            self.mainWeatherLabel?.text = generateViewHelper.mainWeather
-            self.minMaxWeather?.text = generateViewHelper.maxMinTemp
+            }
         }
         
         self.loadMainView()
@@ -73,9 +81,16 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegat
     
     func loadForecastDaily() {
         GettingDailyForecastHelper.instance.getDailyForecast { result in
-            let forecastWrapper = result.value
-            self.addForecastToList(forecastWrapper!)
-            self.tableView?.reloadData()
+            if result.isSuccess {
+                let forecastWrapper = result.value
+                self.addForecastToList(forecastWrapper!)
+                self.tableView?.reloadData()
+            } else {
+                let alert = UIAlertController(title: "Unable to load daily forecast", message: "Cannot get daily forecast data", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+            }
         }
     }
     
